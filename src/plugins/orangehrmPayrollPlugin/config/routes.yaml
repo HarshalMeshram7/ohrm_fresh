@@ -1,0 +1,10 @@
+
+
+##########################
+#        Screens
+##########################
+
+payroll:
+  path: '/payroll/viewPayroll'
+  controller: OrangeHRM\Payroll\Controller\PayrollController::handle
+  methods: [ GET ]
