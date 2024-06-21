@@ -1,0 +1,24 @@
+name: Sync to Bitbucket
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "HarshalMeshram7"
+          git config --global user.email "harshalmeshram112@gmail.com"
+          git remote add bitbucket https://HarshalMeshram7:Harshal@112762@bitbucket.org/Harshal-Meshram/pixonix/ohrm_fresh.git
+
+      - name: Push to Bitbucket
+        run: |
+          git push bitbucket main
